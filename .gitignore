@@ -4,3 +4,4 @@ package-lock.json
 build
 testdb.sqlite
 node_modules
+src/Engine/Videos

@@ -11,13 +11,19 @@ export const getAllUser: RequestHandler = async (
       attributes: ["first_name", "last_name", "email", ["guid", "id"]],
     });
 
-    return res
-      .status(200)
-      .json({
-        error: false,
-        data: { current_users: req.user, all_user: users },
-      });
+    return res.status(200).json({
+      error: false,
+      data: { current_users: req.user, all_user: users },
+    });
   } catch (e) {
     return res.status(400).json({ error: true, msg: String(e) });
+  }
+};
+
+export const getVideo: RequestHandler = async (req, res) => {
+  try {
+    throw "Get video not implemented yet";
+  } catch (e) {
+    return res.status(500).json({ error: true, msg: String(e) });
   }
 };
